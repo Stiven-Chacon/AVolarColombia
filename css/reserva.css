@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.formato{
+    width: 85%;
+    height: 580px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.788);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 110px;
+}
+
+.sub{
+    margin-bottom: 15px;
+}
+
+.encabe{
+    background-color: #ff0000;
+    color: white;
+    height: 60px;
+    border-radius: 5px 5px 0 0;
+}
+
+.titulo{
+    position: relative;
+    font-size: 35px;
+    top: -25px;
+    left: 400px;
+    width: 400px;
+}
+
+.flecha1{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.flecha2{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.content{
+    overflow: hidden;
+    height: 89%;
+}
+
+.formulario{
+    margin-left: 50px;
+    margin-top: 60px;
+}
+
+.d2{
+    margin-left: 380px;
+    margin-top: -75px;
+}
+
+.d3{
+    margin-top: 50px;
+}
+
+.d4{
+    margin-left: 380px;
+    margin-top: -75px;
+}
+
+.d5{
+    margin-left: 750px;
+    margin-top: -60px;
+}
+.d6{
+    margin-left: 930px;
+    margin-top: -60px;
+}
+
+.d8{
+    margin-left: 380px;
+    margin-top: -55px;
+}
+
+.d10{
+    margin-left: 380px;
+    margin-top: -95px;
+}
+
+.td{
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid black;
+    height: 20px;
+}
+
+.origen{
+    margin-left: 750px;
+    margin-top: -60px;
+}
+
+.form-ciudad{
+    border: none;
+    width: 300px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    height: 25px;
+}
+
+.hora{
+    border: none;
+    width: 110px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    height: 25px;
+}
+
+input[type="text"]{
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    font-size: 16px;
+    width: 280px;
+    padding-left: 5px;
+    font-family:'Courier New', Courier, monospace;
+}
+input[type="date"]{
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    font-size: 16px;
+    width: 280px;
+    padding-left: 5px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+input[type="text"]:focus{
+    border-bottom: 2px solid #ff0000;
+}
+
+.boton{
+    width: 320px;
+    height: 40px;
+    position: relative;
+    left: 760px;
+    top: -290px;
+    background: #ff0000;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton:hover{
+    opacity: 80%;
+}
+
+.valor{
+    position: relative;
+    left: 760px;
+    top: -320px;
+    width: 320px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+.content2{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}

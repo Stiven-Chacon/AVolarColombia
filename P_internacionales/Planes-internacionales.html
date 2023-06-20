@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logos/icono2.png" type="image/x-icon">
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="css/Planes-internacionales.css">
+    <title>Viajes Internacionales</title>
+</head>
+<body>
+    <header>
+        <!-- logo -->
+        <img src="../img/logos/logo2.png" class="logo" alt="">
+
+        <!-- campana notify -->
+        <button class="notificacion">
+            <box-icon name='bell' color='#ffffff' size="md" class="campana" id="campana" animation='tada'></box-icon>
+            <div class="num">
+                <span class="subnum">2</span>
+            </div>
+        </button>
+        <div class="seccion-notify">
+            <div class="notify-header" style="font-size: 23px; text-align: center;">
+                Panel de Notificaciones
+            </div>
+            <div class="contenido-notify"><br>
+                <a href="" style="text-decoration: none; color: black;">
+                    <div class="item-notify">
+                        <h4>Planea tus vacaciones</h4>
+                        <p style="font-size: 15px; text-align: justify;">Si quieres organizar tus vacaciones como tu quieres, gestiona tu plan aquí.</p>
+                    </div>
+                </a><br>
+                <a href="" style="text-decoration: none; color: black; text-align: justify;">
+                    <div class="item-notify">
+                        <h4>Ver imformacion de mi vuelo</h4>
+                        <p style="font-size: 15px;">Podras encontrar toda la imformacion sobre su vuelo o plan vacacional, imformacion aquí.</p>
+                    </div>
+                </a><br>
+            </div>
+        </div>
+
+        <!-- menu interactivo -->
+        <box-icon name='menu' id="menu"  color='#ffffff' class="menu" size="md" title="Menu"></box-icon>
+        <nav class="menu-navegacion">
+            <!-- <a href="reserva.html"><box-icon name='file' color='#080808' class="icon-menu" size='md'></box-icon> Hacer Reserva</a> -->
+            <a href="../index.html"><box-icon name='home' type='solid' color='#080808' class="icon-menu" size='md'></box-icon> Inicio</a>
+            <a href="../P_nacionales/Planes-nacionales.html"><box-icon type='solid' name='flag' class="icon-menu" size='md'></box-icon> Viajes Nacionales</a>
+            <!-- <a href="#planesinternacionales"><box-icon type='solid' name='planet' class="icon-menu" size='md'></box-icon> Viajes Internacionales</a> -->
+            <!-- <a href="../Vuelos/Vuelos.html"><box-icon type='solid' name='plane-take-off' class="icon-menu" size='md'></box-icon> Vuelos</a> -->
+            <!-- <a href=""><box-icon type='solid' name='offer' class="icon-menu" size='md'></box-icon> Ofertas</a> -->
+            <a href="https://www.google.com/maps/?hl=es" target="_blank"><box-icon type='solid' name='map' class="icon-menu" size='md'></box-icon> Mapa</a>
+            <a href=""><box-icon type='solid' name='plane-alt' class="icon-menu" size='md'></box-icon> Flota de Aviones</a>
+            <a href="#contact-us"><box-icon type='solid' name='phone-call' class="icon-menu" size='md'></box-icon> Contacto</a>
+        </nav> 
+    </header>
+
+    <div class="contenedor" id="planesnacionales"><br><br><br><br><br><br>
+        <h2 style="margin-left: 65px; font-size: 40px; font-family: 'Lemonada', cursive;">Planes Internacionales</h2><br>
+        <div class="contenido1" id="contenido1">
+            <div class="item" id="item2">
+                <a href="New-York.html"  style="text-decoration: none;">
+                    <img src="img-destinos/New York/2.jpg" alt="" class="img-item">
+                    <div class="informacion">
+                        <p class="paquete">PAQUETE</p>
+                        <br>
+                        <h2 class="ntour">Bogotá - New York</h2>
+                        <h2 class="hotel">Hotel 57</h2>
+                        <h4 class="dias">5 dias / 4 noches</h4><br>
+                        <p class="incluye">Tiquetes - Alojamiento</p><br>
+                        <p class="desde">Desde</p>
+                        <p class="precio">COP 6.400.000</p>
+                        <p class="persona">Por persona</p>
+                    </div>
+                    <input type="button" value="Ver Paquete" class="btnver">
+                </a>
+            </div>
+            <div class="item" id="item2">
+                <a href="Cancun.html"  style="text-decoration: none;" >
+                    <img src="img-destinos/Mexico/Mexico.jpg" alt="" class="img-item">
+                    <div class="informacion">
+                        <p class="paquete">PAQUETE</p>
+                        <br>
+                        <h2 class="ntour">Medellin - Cancun </h2>
+                        <h2 class="hotel">Hotel Emporio Cancún</h2>
+                        <h4 class="dias">4 dias / 3 noches</h4><br>
+                        <p class="incluye">Tiquetes - Alojamiento</p><br>
+                        <p class="desde">Desde</p>
+                        <p class="precio">COP 4.300.000</p>
+                        <p class="persona">Por persona</p>
+                    </div>
+                    <input type="button" value="Ver Paquete" class="btnver">
+                </a>
+            </div>
+            <div class="item" id="item2">
+                <a href="barcelona.html"  style="text-decoration: none;" >
+                    <img src="img-destinos/España/españa.jpg" alt="" class="img-item">
+                    <div class="informacion">
+                        <p class="paquete">PAQUETE</p>
+                        <br>
+                        <h2 class="ntour">Bogotá - Barcelona</h2>
+                        <h2 class="hotel">Hotel Condal Barcelona</h2>
+                        <h4 class="dias">4 dias / 3 noches</h4><br>
+                        <p class="incluye">Tiquetes - Alojamiento</p><br>
+                        <p class="desde">Desde</p>
+                        <p class="precio">COP 4.400.000</p>
+                        <p class="persona">Por persona</p>
+                    </div>
+                    <input type="button" value="Ver Paquete" class="btnver">
+                </a>
+            </div>
+            <div class="item" id="item2">
+                <a href="Miami.html"  style="text-decoration: none;" >
+                    <img src="img-destinos/Miami/miami.jpg" alt="" class="img-item">
+                    <div class="informacion">
+                        <p class="paquete">PAQUETE</p>
+                        <br>
+                        <h2 class="ntour">Bogotá - Miami</h2>
+                        <h2 class="hotel">Hotel Circa 39</h2>
+                        <h4 class="dias">4 dias / 3 noches</h4><br>
+                        <p class="incluye">Tiquetes - Alojamiento</p><br>
+                        <p class="desde">Desde</p>
+                        <p class="precio">COP 3.450.000</p>
+                        <p class="persona">Por persona</p>
+                    </div>
+                    <input type="button" value="Ver Paquete" class="btnver">
+                </a>
+            </div>
+            <div class="item" id="item2">
+                <a href="noruega.html"  style="text-decoration: none;">
+                    <img src="img-destinos/Noruega/noruega2.jpg" alt="" class="img-item">
+                    <div class="informacion">
+                        <p class="paquete">PAQUETE</p>
+                        <br>
+                        <h2 class="ntour">Bogotá - Noruega</h2>
+                        <h2 class="hotel">Hotel Peiskos</h2>
+                        <h4 class="dias">7 dias / 5 noches</h4><br>
+                        <p class="incluye">Tiquetes - Alojamiento</p><br>
+                        <p class="desde">Desde</p>
+                        <p class="precio">COP 6.500.000</p>
+                        <p class="persona">Por persona</p>
+                    </div>
+                    <input type="button" value="Ver Paquete" class="btnver">
+                </a>
+            </div>
+            <div class="item" id="item2">
+                <a href="Francia.html"  style="text-decoration: none;" >
+                    <img src="img-destinos/Francia/francia1.jpg" alt="" class="img-item">
+                    <div class="informacion">
+                        <p class="paquete">PAQUETE</p>
+                        <br>
+                        <h2 class="ntour">Medellin - Francia </h2>
+                        <h2 class="hotel">Hotel Messied</h2>
+                        <h4 class="dias">10 dias / 9 noches</h4><br>
+                        <p class="incluye">Tiquetes - Alojamiento</p><br>
+                        <p class="desde">Desde</p>
+                        <p class="precio">COP 5.180.000</p>
+                        <p class="persona">Por persona</p>
+                    </div>
+                    <input type="button" value="Ver Paquete" class="btnver">
+                </a>
+            </div>
+            <div class="item" id="item2">
+                <a href="puerto-rico.html"  style="text-decoration: none;" >
+                    <img src="img-destinos/Puerto-Rico/puertorico1.jpg" alt="" class="img-item">
+                    <div class="informacion">
+                        <p class="paquete">PAQUETE</p>
+                        <br>
+                        <h2 class="ntour">Bogotá - Puerto Rico</h2>
+                        <h2 class="hotel">Hotel Colonia</h2>
+                        <h4 class="dias">6 dias / 5 noches</h4><br>
+                        <p class="incluye">Tiquetes - Alojamiento</p><br>
+                        <p class="desde">Desde</p>
+                        <p class="precio">COP 3.480.000</p>
+                        <p class="persona">Por persona</p>
+                    </div>
+                    <input type="button" value="Ver Paquete" class="btnver">
+                </a>
+            </div>
+            <div class="item" id="item2">
+                <a href="brazil.html"  style="text-decoration: none;">
+                    <img src="img-destinos/Brazil/brazil1.jpg" alt="" class="img-item">
+                    <div class="informacion">
+                        <p class="paquete">PAQUETE</p>
+                        <br>
+                        <h2 class="ntour">Bogotá - Brazil</h2>
+                        <h2 class="hotel">Hotel Zamba</h2>
+                        <h4 class="dias"> 5 dias / 4 noches</h4><br>
+                        <p class="incluye">Tiquetes - Alojamiento</p><br>
+                        <p class="desde">Desde</p>
+                        <p class="precio">COP 2.800.000</p>
+                        <p class="persona">Por persona</p>
+                    </div>
+                    <input type="button" value="Ver Paquete" class="btnver">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <img src="../img/logos/logo2.png" class="logo-footer">
+        <div class="contact-us" id="contact-us">
+            <p>Nit: 000.111.22-3</p>
+            <p>Dirección: Cll 123 N° 12-4</p>
+            <p>Telefono: 1122334455</p>
+            <p>Creada por: ----------</p>
+        </div>
+        <div class="info">
+            <a href="" class="enlaces1">Acerca de Nosotros  </a><br>
+            <a href="" class="enlaces1">Informacion Sobre el Coronavirus</a><br>
+            <a href="" class="enlaces1">Restricciones por Coronavirus</a><br>
+            <a href="" class="enlaces1">Recomendaciones al viajar</a><br>
+        </div>
+        <div class="social-media">
+            <a href="./" class="social-media-icon">
+                <box-icon name='facebook' type='logo' size='md'></box-icon>
+            </a>
+            <a href="./" class="social-media-icon">
+                <box-icon type='logo' name='whatsapp' size='md'></box-icon>
+            </a>
+            <a href="./" class="social-media-icon">
+                <box-icon type='logo' name='instagram' size='md'></box-icon>
+            </a>
+        </div>
+        
+    </footer>
+    
+</body>
+<script src="../js/notify.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/header.js"></script>
+</html>

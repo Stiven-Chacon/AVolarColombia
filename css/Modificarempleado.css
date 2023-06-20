@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.vtn2{
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  background-color: #026ab9;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: absolute;
+  top: 0%;
+}
+
+.vtn2-texto{
+  background-color: white;
+  margin-top: 20px;
+}
+
+.contents2{
+  background-color: white;
+  margin: 5px;
+}
+
+.formulario{
+  margin-left: 150px;
+  margin-top: 30px;
+}
+
+.form-label{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.form-nombre{
+  width: 35%;
+  height: 30px;
+  position: relative;
+  top: -30px;
+  border: solid 1px;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 80px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+
+.form-tipo{
+  width: 6%;
+  height: 30px;
+  position: relative;
+  top: -35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 40px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+
+.form-ndocu{
+  width: 31.2%;
+  text-align: center;
+  height: 30px;
+  position: relative;
+  top: -35px;
+  border: solid 1px;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 50px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+
+.form-ciudad{
+  width: 35%;
+  height: 30px;
+  position: relative;
+  top: -35px;
+  border: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 80px;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+.form-direccion{
+  width: 35%;
+  height: 30px;
+  position: relative;
+  top: -30px;
+  border: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 80px;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+.form-codigo{
+  width: 30%;
+  height: 30px;
+  position: relative;
+  top: -30px;
+  border: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 140px;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+.form-fecha{
+  width: 28.3%;
+  height: 30px;
+  position: relative;
+  top: -30px;
+  border: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 160px;
+  border-radius: 5px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.sexo{
+  margin-top: -60px;
+}
+
+.cir{
+  text-align: center;
+  border-radius: 5px;
+  border: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  position: relative;
+  left: 150px;
+  top: -20px;
+  width: 29%;
+  height: 30px;
+}
+
+.c2{
+  position: relative;
+  left: 580px;
+  top: -55px;
+}
+
+.c3{
+  margin-top: -50px;
+}
+
+.c4{
+  position: relative;
+  left: 580px;
+  top: -55px;
+}
+
+.c5{
+  margin-top: -60px;
+}
+
+.c6{
+  position: relative;
+  left: 580px;
+  top: -60px;
+}
+
+.c7{
+  margin-top: -60px;
+}
+
+.c9{
+  position: relative;
+  left: 580px;
+  top: -45px;
+}
+
+.c10{
+  margin-top: -30px;
+}
+
+.form-nombre:focus{
+  border: 2px solid #0074c2;
+}
+
+.limp{
+  background-color: rgb(255, 0, 0);
+  border: none;
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  position: relative;
+  left: 800px;
+  top: -60px;
+  color: white;
+  cursor: pointer;
+}
+
+.limp:hover{
+  opacity: 80%;
+}
+
+.limp:active{
+  transform: scale(1.2);
+}
+
+.botonen{
+  background-color: rgb(16, 179, 84);
+  border: none;
+  width: 150px;
+  height: 30px;
+  position: relative;
+  border-radius: 5px;
+  top: -60px;
+  left: 810px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.botonen:hover{
+  opacity: 80%;
+  color: black;
+}
+
+.botonen:active{
+  transform: scale(1.1);
+}

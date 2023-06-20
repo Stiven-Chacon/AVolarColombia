@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(228, 228, 228, 0.514);
+}
+
+/* ajustes header */
+header{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 75px;
+    background: #05528d;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.788);
+    z-index: 10;
+}
+
+/* ajustes logo */
+.logo{
+    height:55px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+/* ajustes de notifiacion */
+
+.notifi{
+    position: absolute;
+    right: 102px;
+    top: 22px;
+    width: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.campana:active{
+    transform: scale(1.2);
+}
+
+.seccion-notify{
+    position: fixed;
+    top: 82px;
+    right: 10px;
+    background-color: lightgray;
+    width: 28%;
+    height: auto;
+    border-radius: 5px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
+    transition: transform .3s ease-in-out;
+    transform:translate(130%);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.notify-header{
+    margin-top: 5px;
+    height: 45px;
+    padding:5px;
+    border-bottom: solid 1.5px #000000;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #323237;
+}
+
+.contenido-notify{
+    margin: 10px;
+}
+
+
+.item-notify:hover{
+    transform: translateX(2px);
+}
+
+.extender{
+    transform: translate(0);
+}
+
+.num{
+    position: absolute;
+    top: 3px;
+    left: 18px;
+    background-color: red;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: none;
+}
+
+.subnum{
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    color: white;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+
+/* ajustes menu */
+
+.menu{
+    position:absolute;
+    top: 18px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.menu:active{
+    transform: scale(1.1)
+}
+
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background: rgba(134, 134, 134, 0.842);
+    display: flex;
+    border-radius: 10px 0px 0px 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: start;
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    font-size: 25px;
+    z-index: 20;
+}
+
+.menu-navegacion a:hover{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    text-align: start;
+    transform: translate(5px);
+}
+
+.spread{
+    transform: translate(0);
+}
+
+.menu-navegacion a{
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+    position:relative;
+    left: 40px;
+}
+
+.icon-menu{
+    position: relative;
+    left: 0px;
+    top: 5px;
+}
+
+
+/* ajustes info-lugar */
+
+.contenedor-info{
+    margin-left: 720px;
+    margin-top: -400px;
+    margin-bottom: 50px;
+    background-color: white;
+    width: 620px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.nom-destino{
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+.descripcion{
+    width: 280px;
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.dp{
+    margin-left: 25px;
+    color: rgb(138, 138, 138);
+}
+
+.dps{
+    margin-left: 25px;
+    margin-bottom: 60px;
+    color: rgb(138, 138, 138);
+}
+.precio1{
+    margin-top: 55px;
+}
+
+.precio{
+    margin-left: 20px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 161, 35);
+}
+
+.infopaq{
+    background-color: white;
+    float: right;
+    margin-top: 20px ;
+    margin-right: 10px;
+    width: 290px;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 3px;
+}
+
+.infopaq-inner{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sub0{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.info-dest{
+    float: right;
+    display: flex;
+    margin-top: -40px;
+    margin-right: 40px;
+    background-color: transparent;
+    font-weight: 600;
+    color: var(--color-1);
+}
+
+.info-ht{
+    float: right;
+    margin-top: -40px;
+    margin-right: 40px;
+    background-color: transparent;
+    font-weight: 600;
+    color: var(--color-1);
+}
+.info-tiq{
+    float: right;
+    margin-top: -40px;
+    margin-right: 40px;
+    background-color: transparent;
+    font-weight: 600;
+    color: var(--color-1);
+}
+
+:root{
+    --color-1:rgb(143, 143, 143);
+}
+
+.info-dur{
+    float: right;
+    margin-top: -40px;
+    margin-right: 60px;
+    background-color: transparent;
+    font-weight: 600;
+    display: flex;
+    color: var(--color-1);
+}
+.n-di{
+    margin-right: 10px;
+}
+.info-inc{
+    float: right;
+    margin-top: -40px;
+    margin-right: 5px;
+    font-size: 15px;
+    background-color: transparent;
+    font-weight: 600;
+    color: var(--color-1);
+}
+
+
+/* ajustes informacion del hotel */
+
+.section1{
+    position: relative;
+    margin-top: 50px;
+    left: 320px;
+    width: 280px;
+    bottom: 30px;
+}
+
+.img-hotel{
+    border-radius:10px 0px 10px 0px;
+    width: 280px;
+    height: 150px;
+}
+
+.description{
+    width: 280px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.nhotel{
+    width: 240px;
+}
+
+.calificacion{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: rgb(0, 117, 252);
+    color: white;
+    width: 35px;
+    height: 20px;
+    border-radius:0px 10px 0px 10px;
+    text-align: center;
+}
+
+.ubicacion{
+    margin-top: 20px;
+}
+
+.i1{
+    font-size: 13px;
+    color: #b3b3b3;
+    margin-left: 25px;
+    margin-top: -28px;
+    font-weight: 500;
+}
+
+.info-des-hotel{
+    background-color: white;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 3px;
+    position: relative;
+    top: 60px;
+}
+
+.section3{
+    margin-top: 20px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section4{
+    margin-top: -430px;
+    margin-left: 20px;
+}
+
+.section2{
+    margin-left: 20px;
+}
+
+.i2{
+    font-size: 13px;
+    margin-left: 25px;
+    margin-top: -26px;
+}
+
+.precio-hotel{
+    margin-top: 80px;
+    padding-bottom: 30px;
+    margin-left: 10px;
+}
+
+.pd{
+    margin-bottom: 5px;
+    color: rgb(138, 138, 138);
+}
+
+.precio2{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 161, 35);
+}
+
+.pr{
+    color: rgb(138, 138, 138);
+}
+
+/* boton compra */
+
+.comprar{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 104, 50);
+    width: 200px;
+    height: 40px;
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.comprar:hover{
+    background-color: rgb(235, 63, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.ruta{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    top: 25px;
+    left: 50px;
+}
+
+.destino{
+    display: flex;
+    font-size: 30px;
+    font-weight: 550;
+    margin-top: -16px;
+}
+
+.destinos1{
+    margin-right: 15px;
+}
+
+.destinos2{
+    margin-left: 15px;
+}
+
+.valor-total{
+    position: absolute;
+    left: 900px;
+    top: 25px;
+}
+
+.moneda{
+    margin-right: 10px;
+}
+
+.total{
+    display: flex;
+    color: green;
+    margin-top: -12px;
+    font-size: 20px;
+}
+
+.duracion{
+    position: absolute;
+    top: 30px;
+    left: 350px;
+}
+
+.n-dias{
+    display: flex;
+    margin-top: -10px;
+}
+
+.dias{
+    margin-right: 10px;
+}
+.operador{
+    position: absolute;
+    top: 30px;
+    left: 620px;
+}
+
+.n-operador{
+    display: flex;
+    margin-top: -10px;
+}
+
+.i-ope{
+    margin-right: 10px;
+}
+/* ajustes barra de compras */
+.barra-compra{
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    height: 105px;
+    position: fixed;
+    display: flex;
+    z-index: 9;
+    bottom: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+
+/* ajustes footer */
+footer{
+    background-color: #044476;
+    display: flex;
+    position: relative;
+    padding-top: 30px;
+    margin-bottom: 100px;
+    height: 220px;
+}
+
+.logo-footer{
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.contact-us{
+    margin-top: 10px;
+    margin-left: 100px;
+    font-size: 16px;
+    color: white;
+}
+
+.social-media{
+    margin-left: 170px;
+    height: 20px;
+    display:flex;
+}
+
+.social-media-icon{
+    margin-left: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+}
+
+.social-media-icon:hover{
+    background-color: white;
+    transform: translateY(-2px);
+    z-index: 0;
+}
+
+.info{
+    margin-left: 100px;
+    font-size: 16px;
+    
+}
+
+.enlaces1{
+    color: white;
+    text-decoration: none;
+}
+
+.enlaces1:hover{
+    text-decoration:underline;
+}

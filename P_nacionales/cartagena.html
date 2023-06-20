@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="../img/logos/icono2.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- slider -->
+    <link rel="stylesheet" href="css/slider.css">
+    <title>Cartagena</title>
+    <body>
+
+    <!-- header -->
+    <header>
+        <!-- logo -->
+        <img src="../img/logos/logo2.png" class="logo" alt="">
+
+        <!-- campana notify -->
+        <button class="notifi">
+            <box-icon name='bell' color='#ffffff' size="md" class="campana" id="campana" animation='tada'></box-icon>
+            <div class="num">
+                <span class="subnum">2</span>
+            </div>
+        </button>
+        <div class="seccion-notify">
+            <div class="notify-header" style="font-size: 23px; text-align: center;">
+                Panel de Notificaciones
+            </div>
+            <div class="contenido-notify">
+                <a href="" style="text-decoration: none; color: black;">
+                    <div class="item-notify">
+                        <h5>Planea tus vacaciones</h5>
+                        <p style="font-size: 15px; text-align: justify;">Si quieres organizar tus vacaciones como tu quieres, gestiona tu plan aquí.</p>
+                    </div>
+                </a>
+                <a href="" style="text-decoration: none; color: black; text-align: justify;">
+                    <div class="item-notify">
+                        <h5>Ver imformacion de mi vuelo</h5>
+                        <p style="font-size: 15px;">Podras encontrar toda la imformacion sobre su vuelo o plan vacacional, imformacion aquí.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- menu interactivo -->
+        <box-icon name='menu' id="menu"  color='#ffffff' class="menu" size="md" title="Menu"></box-icon>
+        <nav class="menu-navegacion">
+            <!-- <a href="reserva.html"><box-icon name='file' color='#080808' class="icon-menu" size='md'></box-icon> Hacer Reserva</a> -->
+            <a href="../index.html"><box-icon name='home' type='solid' color='#080808' class="icon-menu" size='md'></box-icon> Inicio</a>
+            <a href="../P_nacionales/Planes-nacionales.html"><box-icon type='solid' name='flag' class="icon-menu" size='md'></box-icon> Viajes Nacionales</a>
+            <a href="../P_internacionales/Planes-internacionales.html"><box-icon type='solid' name='planet' class="icon-menu" size='md'></box-icon> Viajes Internacionales</a>
+            <!-- <a href="../Vuelos/Vuelos.html"><box-icon type='solid' name='plane-take-off' class="icon-menu" size='md'></box-icon> Vuelos</a> -->
+            <!-- <a href=""><box-icon type='solid' name='offer' class="icon-menu" size='md'></box-icon> Ofertas</a> -->
+            <a href="https://www.google.com/maps/?hl=es" target="_blank"><box-icon type='solid' name='map' class="icon-menu" size='md'></box-icon> Mapa</a>
+            <!-- <a href=""><box-icon type='solid' name='plane-alt' class="icon-menu" size='md'></box-icon> Flota de Aviones</a> -->
+            <a href="#contact-us"><box-icon type='solid' name='phone-call' class="icon-menu" size='md'></box-icon> Contacto</a>
+        </nav> 
+    </header>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+                <img src="img-destinos/cartagena/1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+                <img src="img-destinos/cartagena/2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+                <img src="img-destinos/cartagena/3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- info-lugar -->
+    <div class="contenedor-info">
+        <div class="infopaq">
+            <p class="sub0">Informacion del Paquete</p>
+            <hr>
+            <div class="infopaq-inner">
+              <p>Destino:</p>
+              <div class="info-dest">
+                <p class="destinos1">BOG</p>
+                <span><box-icon name='transfer-alt' ></box-icon></span> 
+                <p class="destinos2">CAR</p>
+              </div>
+              <hr>
+              <p>Hotel:</p>
+              <div class="info-ht">
+                <p>Boutique Sonesta</p>
+              </div>
+              <hr>
+              <p>Incluye:</p>
+              <div class="info-inc">
+                <p>Vuelos - Alojamiento - Tour</p>
+              </div>
+              <hr>
+              <p>Tiquetes:</p>
+              <div class="info-tiq">
+                <p>Ida - Vuelta</p>
+              </div>
+              <hr>
+              <p>Duración:</p>
+              <div class="info-dur">
+                <span class="n-di">5</span><p>Dias</p>
+              </div>
+            </div>
+        </div>
+        <h2 class="nom-destino">Bogota <span>-</span> Cartagena</h2>
+        <p class="descripcion">Es una ciudad portuaria en la costa caribeña de Colombia. Junto al mar, se encuentra la Ciudad Vieja amurallada, que se fundó en el siglo XVI, con plazas, calles de adoquines y edificios coloniales coloridos.</p>
+        <div class="precio1">
+            <h6 class="dp">Precio</h6>
+            <h1 class="precio">COP 1.600.000</h1>
+            <h6 class="dps">Vuelo Por Persona</h6>
+        </div>
+        <hr>
+        <br>
+        <!-- seccion infohotel -->
+
+        <div class="section1">
+            <h5 class="nhotel">Hotel Sonesta</h5>
+            <h6 class="calificacion">5.0</h6>
+            <div class="ubicacion">
+                <box-icon type='solid' name='map' color='#b3b3b3'></box-icon><p class="i1"> Calle del Curato #38-72 Cartagena</p> 
+                <box-icon type='solid' name='phone' color='#b3b3b3'></box-icon><p class="i1">320 5251180 </p>        
+            </div>
+            <div class="info-des-hotel">
+                <p class="sub0">Comodidades</p>
+                <hr>
+                <div class="comodidades-hotel">
+                    <section class="section3">
+                        <section class="section2"><box-icon name='rss' color='#0c0c0c' ></box-icon><p class="i2">Wifi</p></section>
+                        <section class="section2"><box-icon type='solid' name='parking'></box-icon><p class="i2">Parqueadero</p></section>
+                        <section class="section2"><box-icon type='solid' name='drink'></box-icon><p class="i2">Bar</p></section>
+                        <section class="section2"><box-icon name='restaurant'></box-icon><p class="i2">Restaurante</p></section>
+                        <section class="section2"><box-icon type='solid' name='coffee'></box-icon><p class="i2">Desayuno</p></section>
+                        <section class="section2"><box-icon name='swim'></box-icon><p class="i2">Piscina</p></section>
+                        <section class="section2"><box-icon type='solid' name='bath'></box-icon><p class="i2">Jacuzzi</p></section>
+                        <section class="section2"><box-icon type='solid' name='spa'></box-icon><p class="i2">Spa</p></section>
+                        <section class="section2"><img src="svg/558013.svg" alt="" width="20px" height="20px" style="margin-top: -15px;" ><p class="i2">Aire</p></section>
+                    </section>
+                </div>
+            </div> 
+        </div>
+
+        <div class="section4">
+            <img src="img-destinos/cartagena/senesta.jpg" class="img-hotel">
+            <p class="description">
+            Hotel Senasta ofrece a sus huéspedes experiencias  de viaje que junto al confort y lujo,se convierte en algo inolvidable, para conocer La ciudad amurallada, encierra un sin numero de atractivos llenos de cultura, tradición, paisajes experiencias al aire libre y mucho mas.
+            </p>
+            <div class="precio-hotel">
+                <h6 class="pd">Precio</h6>
+                <h1 class="precio2">COP 120.000</h1>
+                <h6 class="pr">Noche Por Persona</h6>
+            </div>
+        </div>
+    </div>
+    <div class="barra-compra">
+        <div class="ruta">
+            <p style="opacity: 50%;">Destino</p>
+            <div class="destino">
+                <p class="destinos1">BOG</p>
+                <span><box-icon name='transfer-alt' ></box-icon></span> 
+                <p class="destinos2">CAR</p> 
+            </div>
+        </div>
+
+        <div class="duracion">
+            <p style="opacity: 50%;">Duración</p>
+            <div class="n-dias">
+                <span class="dias">5</span><p>Dias</p>
+            </div>
+        </div>
+
+        <div class="operador">
+            <p style="opacity: 50%;">Operador</p>
+            <div class="n-operador">
+                <span class="i-ope">A Volar Colombia</span>
+            </div>
+        </div>
+
+        <div class="valor-total">
+            <p style="opacity: 50%;">Valor Total</p>
+            <div class="total">
+                <span class="moneda">COP</span><p>1.720.000</p>
+            </div>
+        </div>
+        <a href="../Formulario_reserva.php"><input type="submit" value="Comprar Paquete" class="comprar"></a>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <img src="../img/logos/logo2.png" class="logo-footer">
+        <div class="contact-us" id="contact-us">
+            <p>Nit: 000.111.22-3</p>
+            <p>Dirección: Cll 123 N° 12-4</p>
+            <p>Telefono: 1122334455</p>
+            <p>Creada por: ----------</p>
+        </div>
+        <div class="info">
+            <a href="" class="enlaces1">Acerca de Nosotros  </a><br>
+            <a href="" class="enlaces1">Informacion Sobre el Coronavirus</a><br>
+            <a href="" class="enlaces1">Restricciones por Coronavirus</a><br>
+            <a href="" class="enlaces1">Recomendaciones al viajar</a><br>
+        </div>
+        <div class="social-media">
+            <a href="./" class="social-media-icon">
+                <box-icon name='facebook' type='logo' size='md'></box-icon>
+            </a>
+            <a href="./" class="social-media-icon">
+                <box-icon type='logo' name='whatsapp' size='md'></box-icon>
+            </a>
+            <a href="./" class="social-media-icon">
+                <box-icon type='logo' name='instagram' size='md'></box-icon>
+            </a>
+        </div>
+    </footer>
+    
+</body>
+<script src="../js/notify.js"></script>
+<script src="../js/menu.js"></script>
+</html>

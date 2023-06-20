@@ -1,0 +1,976 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+:root{
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow: -moz-hidden-unscrollable;
+}
+
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101D;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 260px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+  margin-top: 15px;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 69%;
+}
+
+.sidebar.open .nav-list{
+    overflow-y: scroll;
+    margin-right: -14px;
+}
+
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #1d1b31;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #11101d;
+}
+
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #11101D;
+}
+.sidebar li a:hover{
+  background: #FFF;
+}
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 260px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 20px;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section1{
+  position: relative;
+  background: #5F9EA0;
+  height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+  overflow-y: scroll;
+}
+.sidebar.open ~ .home-section1{
+  left: 260px;
+  width: calc(100% - 250px);
+}
+.home-section1 .texto{
+  display: inline-block;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+.home-section2{
+  position: relative;
+  background: #FFD700;
+  height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+  overflow-y: scroll;
+}
+.sidebar.open ~ .home-section2{
+  left: 260px;
+  width: calc(100% - 250px);
+}
+.home-section2 .texto{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+
+.home-section3{
+  position: relative;
+  background:  	#EEE8AA;
+  height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+  overflow-y: scroll;
+}
+.sidebar.open ~ .home-section3{
+  left: 260px;
+  width: calc(100% - 250px);
+}
+.home-section3 .texto{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+
+.home-section4{
+  position: relative;
+  background:  	#EEE8AA;
+  height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+  overflow-y: scroll;
+}
+.sidebar.open ~ .home-section4{
+  left: 260px;
+  width: calc(100% - 250px);
+}
+.home-section4 .texto{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+
+
+/* estilos tabla de usuarios */
+
+#Usuarios table{
+  width: 97.5%;
+  margin-left: 20px;
+  border-spacing: 0px;
+  border-radius: 5px;
+  border: solid 1px;
+}
+
+#Usuarios thead td{
+  background:  	#1E90FF;
+  color: white;
+  height: 40px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#Usuarios tbody td{
+  background-color: #F8F8FF;
+  text-align: center;
+  font-size: 12px;
+  height: 45px;
+  border-bottom: solid 1px;
+}
+
+#Usuarios thead .id{
+  text-align: center;
+  width: 30px;
+  color: white;
+  border-right: solid 1px black;
+}
+
+#Usuarios tbody .id{
+  text-align: center;
+  background-color: #1d1b3177;
+  width: 30px;
+  color: white;
+}
+
+#Usuarios .editar{
+  background-color: #00d369;
+  border-radius: 4px;
+  color: white;
+  border-right: none;
+  text-decoration: none;
+}
+
+#Usuarios .borrar{
+  background-color: rgb(255, 78, 78);
+  border-radius: 4px;
+  color: white;
+  border-right: none;
+}
+
+#Usuarios .editar:hover{
+  color: #11101D;
+}
+
+#Usuarios .borrar:hover{
+  color: #11101D;
+}
+
+#Usuarios .bx-edit-alt{
+  width: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#Usuarios .bx-trash-alt{
+  width: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* estilos tabla de ventas */
+#Ventas table{
+  width: 120%;
+  margin-left: 20px;
+  border-spacing: 0px;
+  border-radius: 5px;
+  border: solid 1px;
+}
+
+#Ventas thead td{
+  background:  	#1E90FF;
+  color: white;
+  height: 40px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#Ventas tbody td{
+  background-color: #F8F8FF;
+  text-align: center;
+  font-size: 12px;
+  height: 45px;
+  border-bottom: solid 1px;
+}
+
+#Ventas thead .id{
+  text-align: center;
+  width: 30px;
+  color: white;
+  border-right: solid 1px black;
+}
+
+#Ventas tbody .id{
+  text-align: center;
+  background-color: #1d1b3177;
+  width: 30px;
+  color: white;
+}
+
+#Ventas .editar{
+  background-color: #00d369;
+  border-radius: 4px;
+  color: white;
+  border-right: none;
+  text-decoration: none;
+}
+
+#Ventas .borrar{
+  background-color: rgb(255, 78, 78);
+  border-radius: 4px;
+  color: white;
+  border-right: none;
+}
+
+#Ventas .editar:hover{
+  color: #11101D;
+}
+
+#Ventas .borrar:hover{
+  color: #11101D;
+}
+
+#Ventas .bx-edit-alt{
+  width: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#Ventas .bx-trash-alt{
+  width: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* estilos tabla de Empleados */
+
+#Empleados table{
+  width: 140%;
+  margin-left: 20px;
+  border-spacing: 0px;
+  border-radius: 5px;
+  border: solid 1px;
+}
+
+#Empleados thead td{
+  background:  #FF4500;
+  color: white;
+  height: 40px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#Empleados tbody td{
+  background-color: #F8F8FF;
+  text-align: center;
+  font-size: 12px;
+  height: 45px;
+  border-bottom: solid 1px;
+}
+
+#Empleados thead .id{
+  text-align: center;
+  width: 30px;
+  color: white;
+  border-right: solid 1px black;
+}
+
+#Empleados tbody .id{
+  text-align: center;
+  background-color: #858585;
+  width: 30px;
+  color: white;
+}
+
+#Empleados .editar{
+  background-color: rgb(78, 149, 255);
+  border-radius: 5px;
+  color: white;
+  border-right: none;
+}
+
+#Empleados .borrar{
+  background-color: rgb(255, 78, 78);
+  border-radius: 5px;
+  color: white;
+  border-right: none;
+}
+
+#Empleados .editar:hover{
+  color: #11101D;
+}
+
+#Empleados .borrar:hover{
+  color: #11101D;
+}
+
+#Empleados .bx-edit-alt{
+  width: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#Empleados .bx-trash-alt{
+  width: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#Empleados .agregar{
+  margin-left: 20px;
+  margin-top: 20px;
+  height: 30px;
+  width: 150px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(52, 199, 83);
+}
+
+
+/* ajustes de agregar nuevo empleado */
+
+.vtn2-content{
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 55;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar.open ~ #Empleados .vtn2{
+  left: 130px;
+  width: calc(90% - 200px);
+}
+
+.vtn2{
+  width: 80%;
+  height: 90%;
+  overflow: hidden;
+  background-color: #05528d;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: relative;
+  transition: transform 1.5s;
+  transform: translateY(0%);
+  left: 45px;
+  transition: 0.5s;
+}
+
+.vtn2-close{
+  transform: translateY(200%);
+}
+
+.vtn2-texto{
+  background-color: white;
+  margin-top: 15px;
+}
+
+.contents2{
+  background-color: white;
+  margin: 5px;
+}
+
+.close4{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: inline-block;
+  font-size: 20px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+
+.close4:hover{
+  color: red;
+}
+
+.formulario{
+  margin-left: 80px;
+}
+
+.form-label{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.form-nombre{
+  width: 35%;
+  height: 30px;
+  position: relative;
+  top: -30px;
+  border: solid 1px;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 80px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+
+.form-tipo{
+  width: 6%;
+  height: 30px;
+  position: relative;
+  top: -35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 40px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+
+.form-ndocu{
+  width: 31.5%;
+  text-align: center;
+  height: 30px;
+  position: relative;
+  top: -35px;
+  border: solid 1px;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 50px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+
+.form-ciudad{
+  width: 35%;
+  height: 30px;
+  position: relative;
+  top: -35px;
+  border: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 80px;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+.form-direccion{
+  width: 35%;
+  height: 30px;
+  position: relative;
+  top: -30px;
+  border: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 80px;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+.form-codigo{
+  width: 29%;
+  height: 30px;
+  position: relative;
+  top: -30px;
+  border: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 140px;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+.form-fecha{
+  width: 27%;
+  height: 30px;
+  position: relative;
+  top: -30px;
+  border: solid 1px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  left: 160px;
+  border-radius: 5px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.sexo{
+  margin-top: -60px;
+}
+
+.cir{
+  margin-left: 150px;
+  margin-top: -25px;
+}
+
+.c2{
+  position: relative;
+  left: 470px;
+  top: -55px;
+}
+
+.c3{
+  margin-top: -50px;
+}
+
+.c4{
+  position: relative;
+  left: 470px;
+  top: -55px;
+}
+
+.c5{
+  margin-top: -60px;
+}
+
+.c6{
+  position: relative;
+  left: 470px;
+  top: -55px;
+}
+
+.c7{
+  margin-top: -60px;
+}
+
+.c9{
+  position: relative;
+  left: 470px;
+  top: -25px;
+}
+
+.c10{
+  margin-top: -30px;
+}
+
+.form-nombre:focus{
+  border: 2px solid #0074c2;
+}
+
+.sidebar.open ~ #Empleados .limp{
+  left: 610px;
+  transition: 0.5s;
+}
+.sidebar.open ~ #Empleados .botonen{
+  left: 630px;
+}
+
+.limp{
+  background-color: rgb(255, 0, 0);
+  border: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  position: relative;
+  left: 640px;
+  top: -40px;
+  color: white;
+  cursor: pointer;
+}
+
+.limp:hover{
+  opacity: 80%;
+}
+
+.limp:active{
+  transform: scale(1.2);
+}
+
+.botonen{
+  background-color: rgb(16, 179, 84);
+  border: none;
+  width: 150px;
+  height: 30px;
+  position: relative;
+  border-radius: 5px;
+  top: -40px;
+  left: 650px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.botonen:hover{
+  opacity: 80%;
+  color: black;
+}
+
+.botonen:active{
+  transform: scale(1.1);
+}
+
+/* estilos tabla de Mensages */
+
+#Mensages table{
+  width: 120%;
+  margin-left: 20px;
+  border-spacing: 0px;
+  border-radius: 5px;
+  border: solid 1px;
+}
+
+#Mensages thead td{
+  background:  #e28306;
+  color: white;
+  height: 40px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#Mensages tbody td{
+  background-color: #F8F8FF;
+  text-align: center;
+  font-size: 12px;
+  height: 45px;
+  border-bottom: solid 1px;
+}
+
+#Mensages thead .id{
+  text-align: center;
+  width: 30px;
+  color: white;
+  border-right: solid 1px black;
+}
+
+#Mensages tbody .id{
+  text-align: center;
+  background-color: #858585;
+  width: 30px;
+  color: white;
+}
+
+#Mensages .editar{
+  color: white;
+}
+
+#Mensages .borrar{
+  color: white;
+}
+
+#Mensages .editar:hover{
+  color: #11101D;
+}
+
+#Mensages .borrar:hover{
+  color: #11101D;
+}
+
+#Mensages .bx-cog{
+  margin-top: 5px;
+}
+
+#Mensages .bx-trash-alt{
+  margin-top: 5px;
+}
+
+#Mensages .chat{
+  border: none;
+  background-color: #5F9EA0;
+  color: white;
+  width: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#Mensages .btn1{
+  border: none;
+  background-color: lightslategray;
+  color: white;
+  width: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#Mensages .btn2{
+  border: none;
+  background-color: red;
+  color: white;
+  width: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#Mensages .chat:hover{
+  color: black;
+}
+
+#Mensages .bx-message-detail{
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+
